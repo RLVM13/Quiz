@@ -1,0 +1,119 @@
+* {
+    background-image: url(assets/fondo.jpg);
+}
+
+.css-button-fully-rounded--blue {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid #2c0b8e;
+  background: #2c0b8e;
+}
+.css-button-fully-rounded--blue:hover {
+  background: #fff;
+  color: #2c0b8e
+}
+/*
+#quizForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  
+  #quizForm > div > div{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 12px;
+    margin-inline-end: 0px;
+    font-weight:bolder;
+  }
+  */
+  /* RESPONSIVE */
+
+  #quizForm {  /*movil */
+    display: flex;  /*solo en el padre, por defecto coloca los elementos hacia la dcha */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: stretch;
+    
+  }
+  
+  #quizForm > div > article {
+    margin: 10px;
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  #quizForm > div > article > img{
+    width: 70%;
+    height: 70%;
+  }
+ 
+  
+  @media screen and (min-width: 576px) {  /* tablet */
+    #quizForm {  
+      flex-flow: column;
+      place-content: flex-start center;
+      align-items: baseline;
+  
+    }
+  
+    #quizForm>div>article {
+      font-size: 20px;
+      display: column;
+    }
+  
+    #quizForm>div>article>p {
+      overflow: auto;
+  }
+
+  #quizForm > div > article > img{
+    width: 85%;
+    height: 85%;
+  }
+ 
+
+  }
+  
+  @media screen and (min-width: 1200px) {  /* desktop */
+    #quizForm {
+      flex-direction: row;
+      align-content: center;
+      justify-content: flex-start;
+      align-items: baseline;
+    }
+    
+  
+    #quizForm>div {
+      font-size: 30px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: stretch;
+      justify-content: flex-start;
+      align-items: baseline;
+    }
+  
+    #quizForm >div > article {
+      font-size: 30px;
+    }
+
+    #quizForm > div > article > img{
+      width: 100%;
+      height: 100%;
+    }
+  }
