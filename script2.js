@@ -155,20 +155,27 @@ for (let i = 0; i < preguntas.length; i++) {
                 <h3>Pregunta: `+ (i + 1) + " - " + `${preguntas[i].pregunta}</h3>
                 <img src="${preguntas[i].imagen}" width="500" height="300"><br>
                 <label for="${preguntas[i].id}"></label>
-                <div><h4>
-                <input type="radio" id="${preguntas[i].r1}" name="${preguntas[i].id}" value="r1"/>${preguntas[i].r1}<br>
-                <input type="radio" id="${preguntas[i].r2}" name="${preguntas[i].id}" value="r2"/>${preguntas[i].r2}<br>
-                <input type="radio" id="${preguntas[i].r3}" name="${preguntas[i].id}" value="r3"/>${preguntas[i].r3}<br>
-                <input type="radio" id="${preguntas[i].r4}" name="${preguntas[i].id}" value="r4"/>${preguntas[i].r4}</h4></div><br>
-              </article>`
+                <div>
+                <button type="button" class="css-button-3d--black" id="${preguntas[i].r1}" name="${preguntas[i].id}" value="r1"/>${preguntas[i].r1}
+                <button type="button" class="css-button-3d--black" id="${preguntas[i].r2}" name="${preguntas[i].id}" value="r2"/>${preguntas[i].r2}
+                <button type="button" class="css-button-3d--black" id="${preguntas[i].r3}" name="${preguntas[i].id}" value="r3"/>${preguntas[i].r3}
+                <button type="button" class="css-button-3d--black" id="${preguntas[i].r4}" name="${preguntas[i].id}" value="r4"/>${preguntas[i].r4}
+                </div>
+                </article>`
 }
 trivial += `<input type="submit" value="Enviar Respuestas" class="css-button-fully-rounded--blue"/>`;
 trivial += "</div>";
 
 document.getElementById("quizForm").innerHTML = trivial;
 
+let boton1 = document.getElementById("Oculus Reparo");
+let valor1 = boton1.value;
+console.log(boton1);
+console.log(valor1);
+    
 
 //VALIDACION DE RESPUESTAS
+
 document.querySelector("#quizForm").addEventListener("submit", function (event) {
     event.preventDefault(); // paraliza envío formulario
 
@@ -182,7 +189,7 @@ document.querySelector("#quizForm").addEventListener("submit", function (event) 
     const respuesta8 = event.target.n8.value;
     const respuesta9 = event.target.n9.value;
     const respuesta10 = event.target.n10.value;
-
+    
     let errores = "";
     let aciertos = 0;
 
@@ -310,7 +317,7 @@ document.querySelector("#quizForm").addEventListener("submit", function (event) 
         }
     */
     console.log(errores);
-
+/*
     if (errores.length != 0) {
         alert(errores);
     }
@@ -323,6 +330,6 @@ document.querySelector("#quizForm").addEventListener("submit", function (event) 
         //Enviar formulario
         alert("Gracias, por jugar");
         event.target.submit();
-    }
+    }*/
 
 });
